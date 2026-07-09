@@ -126,80 +126,40 @@
     <!-- PAGE HERO -->
     <div class="page-hero">
       <div class="page-hero-inner">
-        <p class="section-label">Get In Touch</p>
-        <h1>Let's <span>Talk</span></h1>
-        <p>Book a free strategy call or send us a message. We'll get back to you within one business day.</p>
+        <p class="section-label">Get Started</p>
+        <h1>Book a <span>Free Call</span></h1>
+        <p>Pick a time that works for you. We'll talk through your business and show you exactly how AI can help you grow.</p>
       </div>
     </div>
 
-    <!-- CONTACT SECTION -->
+    <!-- BOOKING SECTION -->
     <section class="section">
       <div class="section-inner">
         <div class="contact-grid">
-          <!-- FORM -->
-          <div class="contact-form">
-            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:1.5rem;">Send Us a Message</h3>
-            <form action="mailto:vmnus06@gmail.com" method="post" enctype="text/plain">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="First Name" placeholder="John" required />
-                </div>
-                <div class="form-group">
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="Last Name" placeholder="Smith" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="Email" placeholder="john@example.com" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="Phone" placeholder="(555) 000-0000" />
-              </div>
-              <div class="form-group">
-                <label for="service">What Are You Interested In?</label>
-                <select id="service" name="Service">
-                  <option value="">Select a service...</option>
-                  <option value="AI Automation">AI Voice &amp; Lead Automation</option>
-                  <option value="Website">High-End Website</option>
-                  <option value="Lead Capture">Lead Capture &amp; Ads</option>
-                  <option value="Creative Content">Creative Content</option>
-                  <option value="All Services">Full Package / Not Sure Yet</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Tell Us About Your Business</label>
-                <textarea id="message" name="Message" placeholder="What does your business do? What's your biggest challenge right now?"></textarea>
-              </div>
-              <button type="submit" class="form-submit">Send Message →</button>
-            </form>
+          <!-- EMBEDDED CALENDAR -->
+          <div style="grid-column: 1 / -1;">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/gqLFksCPUoJGXuCFsm3I"
+              style="width:100%; min-height:700px; border:none; border-radius:12px;"
+              scrolling="no"
+              id="ghl-calendar">
+            </iframe>
           </div>
+        </div>
 
-          <!-- CONTACT INFO -->
-          <div class="contact-info">
-            <h3 style="margin-bottom:1.25rem;">Contact Information</h3>
-
-            <div class="info-box">
-              <h4>📍 Address</h4>
-              <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
-            </div>
-
-            <div class="info-box">
-              <h4>📞 Phone</h4>
-              <a href="tel:+12533354907">(253) 335-4907</a>
-            </div>
-
-            <div class="info-box">
-              <h4>💬 Chat</h4>
-              <p>Use the chat widget in the bottom-right corner of this page to connect with our GoHighLevel AI agent instantly.</p>
-            </div>
-
-            <div class="info-box">
-              <h4>🕐 Response Time</h4>
-              <p>We typically respond within a few hours during business hours. For urgent matters, call or use the chat widget.</p>
-            </div>
+        <!-- CONTACT INFO ROW -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-top:3rem;">
+          <div class="info-box">
+            <h4>📍 Address</h4>
+            <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
+          </div>
+          <div class="info-box">
+            <h4>📞 Phone</h4>
+            <a href="tel:+12533354907">(253) 335-4907</a>
+          </div>
+          <div class="info-box">
+            <h4>💬 Chat</h4>
+            <p>Use the chat widget in the bottom-right corner to connect with our AI agent instantly.</p>
           </div>
         </div>
       </div>
