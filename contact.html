@@ -3,102 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — V&amp;M Agency</title>
-  <meta name="description" content="Get in touch with V&M Agency. Book a free strategy call or reach us directly. Based in Northville, Michigan." />
+  <title>Book a Call — V&amp;M Agency</title>
+  <meta name="description" content="Book a free strategy call with V&M Agency. Based in Northville, Michigan." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.png" type="image/png" />
   <style>
-    .contact-form {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2.5rem;
+    .booking-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--gray);
-      margin-bottom: 0.4rem;
-    }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
+    .booking-wrap iframe {
       width: 100%;
-      background: var(--black);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--white);
-      font-size: 0.95rem;
-      padding: 0.75rem 1rem;
-      outline: none;
-      transition: border-color 0.2s;
-      font-family: inherit;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--orange);
-    }
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    .form-group select option {
-      background: var(--dark);
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .form-submit {
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--orange);
-      color: var(--white);
+      min-height: 700px;
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 0.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
     }
-    .form-submit:hover {
+    .fallback-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 1rem 2.5rem;
+      background: var(--orange);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .fallback-btn:hover {
       background: var(--orange-light);
+      color: #fff;
+    }
+    .contact-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+      text-align: left;
     }
     .info-box {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1.5rem;
-      margin-bottom: 1.25rem;
     }
     .info-box h4 {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--orange);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
     .info-box p, .info-box a {
       color: var(--gray);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       line-height: 1.7;
       text-decoration: none;
     }
-    .info-box a:hover {
-      color: var(--orange);
-    }
-    @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-      .contact-form { padding: 1.5rem; }
-    }
+    .info-box a:hover { color: var(--orange); }
   </style>
 </head>
 <body>
@@ -123,47 +89,39 @@
   </nav>
 
   <main>
-    <!-- PAGE HERO -->
     <div class="page-hero">
       <div class="page-hero-inner">
         <p class="section-label">Get Started</p>
         <h1>Book a <span>Free Call</span></h1>
-        <p>Pick a time that works for you. We'll talk through your business and show you exactly how AI can help you grow.</p>
+        <p>Pick a time that works for you. We'll show you exactly how AI can grow your business.</p>
       </div>
     </div>
 
-    <!-- BOOKING SECTION -->
-    <section class="section">
-      <div class="section-inner">
-        <div class="contact-grid">
-          <!-- EMBEDDED CALENDAR -->
-          <div style="grid-column: 1 / -1;">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/booking/gqLFksCPUoJGXuCFsm3I"
-              style="width:100%; min-height:700px; border:none; border-radius:12px;"
-              scrolling="no"
-              id="ghl-calendar">
-            </iframe>
-          </div>
-        </div>
+    <div class="booking-wrap">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/booking/gqLFksCPUoJGXuCFsm3I"
+        scrolling="no"
+        title="Book a Call with V&M Agency">
+      </iframe>
 
-        <!-- CONTACT INFO ROW -->
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-top:3rem;">
-          <div class="info-box">
-            <h4>📍 Address</h4>
-            <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
-          </div>
-          <div class="info-box">
-            <h4>📞 Phone</h4>
-            <a href="tel:+12533354907">(253) 335-4907</a>
-          </div>
-          <div class="info-box">
-            <h4>💬 Chat</h4>
-            <p>Use the chat widget in the bottom-right corner to connect with our AI agent instantly.</p>
-          </div>
+      <p style="color:var(--gray); font-size:0.9rem; margin-top:1rem;">Calendar not loading?</p>
+      <a href="https://api.leadconnectorhq.com/widget/booking/gqLFksCPUoJGXuCFsm3I" target="_blank" class="fallback-btn">Book a Call →</a>
+
+      <div class="contact-row">
+        <div class="info-box">
+          <h4>📍 Address</h4>
+          <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
+        </div>
+        <div class="info-box">
+          <h4>📞 Phone</h4>
+          <a href="tel:+12533354907">(253) 335-4907</a>
+        </div>
+        <div class="info-box">
+          <h4>💬 Chat</h4>
+          <p>Use the chat widget in the bottom-right corner to connect with our AI agent instantly.</p>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -172,7 +130,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <span class="nav-logo-text">V<span style="color:var(--orange)">&amp;</span>M Agency</span>
-          <p>AI automation and digital marketing for construction and trades businesses. We turn missed calls into booked jobs.</p>
+          <p>AI automation and digital marketing for businesses of all kinds. We turn missed calls into booked jobs.</p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
@@ -180,7 +138,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Book a Call</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
