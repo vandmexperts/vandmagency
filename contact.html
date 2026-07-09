@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — V&amp;M Agency</title>
+  <meta name="description" content="Get in touch with V&M Agency. Book a free strategy call or reach us directly. Based in Northville, Michigan." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 0.95rem;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--orange);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-group select option {
+      background: var(--dark);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--orange-light);
+    }
+    .info-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .info-box h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.75rem;
+    }
+    .info-box p, .info-box a {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      text-decoration: none;
+    }
+    .info-box a:hover {
+      color: var(--orange);
+    }
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="V&amp;M Agency Logo" onerror="this.style.display='none'" />
+        <span class="nav-logo-text">V<span>&amp;</span>M Agency</span>
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta active">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <p class="section-label">Get In Touch</p>
+        <h1>Let's <span>Talk</span></h1>
+        <p>Book a free strategy call or send us a message. We'll get back to you within one business day.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="contact-grid">
+          <!-- FORM -->
+          <div class="contact-form">
+            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:1.5rem;">Send Us a Message</h3>
+            <form action="mailto:vmnus06@gmail.com" method="post" enctype="text/plain">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="First Name" placeholder="John" required />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="Last Name" placeholder="Smith" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="Phone" placeholder="(555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="service">What Are You Interested In?</label>
+                <select id="service" name="Service">
+                  <option value="">Select a service...</option>
+                  <option value="AI Automation">AI Voice &amp; Lead Automation</option>
+                  <option value="Website">High-End Website</option>
+                  <option value="Lead Capture">Lead Capture &amp; Ads</option>
+                  <option value="Creative Content">Creative Content</option>
+                  <option value="All Services">Full Package / Not Sure Yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Business</label>
+                <textarea id="message" name="Message" placeholder="What does your business do? What's your biggest challenge right now?"></textarea>
+              </div>
+              <button type="submit" class="form-submit">Send Message →</button>
+            </form>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="contact-info">
+            <h3 style="margin-bottom:1.25rem;">Contact Information</h3>
+
+            <div class="info-box">
+              <h4>📍 Address</h4>
+              <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
+            </div>
+
+            <div class="info-box">
+              <h4>📞 Phone</h4>
+              <a href="tel:+12533354907">(253) 335-4907</a>
+            </div>
+
+            <div class="info-box">
+              <h4>💬 Chat</h4>
+              <p>Use the chat widget in the bottom-right corner of this page to connect with our GoHighLevel AI agent instantly.</p>
+            </div>
+
+            <div class="info-box">
+              <h4>🕐 Response Time</h4>
+              <p>We typically respond within a few hours during business hours. For urgent matters, call or use the chat widget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo-text">V<span style="color:var(--orange)">&amp;</span>M Agency</span>
+          <p>AI automation and digital marketing for construction and trades businesses. We turn missed calls into booked jobs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact</h4>
+          <p>18600 Northville Rd, Ste 140<br>Northville, Michigan 48168<br>Wayne County</p>
+          <p><a href="tel:+12533354907">(253) 335-4907</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 V&amp;M Agency. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GoHighLevel Chat Widget -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js"
+    data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+    data-widget-id="6a3e5ccc055fd48edf4a342e"
+    data-source="WEB_USER"></script>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
