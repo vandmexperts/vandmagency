@@ -6,7 +6,7 @@
   <title>Website Giveaway | V&amp;M Agency</title>
   <meta name="description" content="We're building one Orange County business a free website. No fees. No catch. You keep it." />
   <meta property="og:title" content="Website Giveaway: one Orange County business gets a free website" />
-  <meta property="og:description" content="No fees. No catch. You keep it. Apply in 1 minute." />
+  <meta property="og:description" content="No fees. No catch. You keep it. Enter in 1 minute. Winner drawn at random." />
   <link rel="icon" href="../logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -112,12 +112,21 @@
       .f1 { left: -70px; top: 70px; } .f2 { right: -70px; top: 260px; } .f3 { left: -60px; top: 450px; } }
     @media (max-width: 560px) { .c4 { grid-template-columns: 1fr; } .two { grid-template-columns: 1fr; } .stage { transform: scale(.86); margin-top: 30px; }
       .float { padding: 9px 12px 9px 9px; } .float b { font-size: 14px; } .float .ic { width: 30px; height: 30px; } .brand small { display: none; } }
+    .incl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 40px; text-align: left; }
+    .incl div { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+    .incl b { display: block; font-size: 15px; } .incl b::before { content: "✓ "; color: var(--or2); }
+    .incl span { display: block; color: var(--mute); font-size: 13px; margin-top: 4px; line-height: 1.4; }
+    .note { color: #6c6c74; font-size: 13px; margin: 18px auto 0; max-width: 620px; }
+    .rules { max-width: 640px; margin: 28px auto 0; text-align: left; }
+    .rules p { color: #7c7c84; font-size: 13px; line-height: 1.55; margin-top: 10px; }
+    @media (max-width: 900px) { .incl { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .incl { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <nav><div class="wrap">
     <a class="brand" href="../index.html"><img src="../logo.png" alt="">V&amp;M Agency <small>Website Giveaway</small></a>
-    <a class="btn pri sm" href="#apply">Apply now</a>
+    <a class="btn pri sm" href="#apply">Enter now</a>
   </div></nav>
 
   <header class="hero">
@@ -125,8 +134,8 @@
     <div class="wrap" style="position:relative">
       <span class="chip">🎁 Orange County · Website Giveaway</span>
       <h1>One local business gets a <span class="grad">free website.</span></h1>
-      <p class="sub">No fees. No catch. <b>You keep it.</b></p>
-      <div class="ctas"><a class="btn pri" href="#apply">Apply free →</a><a class="btn sec" href="#how">How it works</a></div>
+      <p class="sub">Winner drawn <b>at random</b>. No fees. No catch.</p>
+      <div class="ctas"><a class="btn pri" href="#apply">Enter free →</a><a class="btn sec" href="#included">What's included</a></div>
 
       <div class="stage">
         <div class="phone"><div class="notch"></div>
@@ -140,41 +149,46 @@
         </div>
         <div class="float f1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><b>$0</b><small>No setup · no monthly</small></div></div>
         <div class="float f2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><b>On Google</b><small>Built to be found</small></div></div>
-        <div class="float f3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div><b>Nov 13</b><small>Winner picked</small></div></div>
+        <div class="float f3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div><b>Nov 13</b><small>Random draw</small></div></div>
       </div>
     </div>
   </header>
 
-  <section class="s alt">
+  <section class="s alt" id="included">
     <div class="wrap">
-      <h2>What you get.</h2>
-      <p class="lead">A real website. Built for you. Yours to keep.</p>
-      <div class="grid c4">
-        <div class="card"><div class="ic">🎨</div><h3>Custom design</h3><p>Made for your brand, not a template.</p></div>
-        <div class="card"><div class="ic">📱</div><h3>Phone-first</h3><p>Looks amazing where customers find you.</p></div>
-        <div class="card"><div class="ic">📞</div><h3>One-tap contact</h3><p>Call, book or message in one tap.</p></div>
-        <div class="card"><div class="ic">📍</div><h3>Found on Google</h3><p>Set up to show up in local search.</p></div>
+      <h2>What's included.</h2>
+      <p class="lead">The full website. No upsell to make it work.</p>
+      <div class="incl">
+        <div><b>Up to 5 pages</b><span>Home, services, about, gallery, contact</span></div>
+        <div><b>Custom design</b><span>Your logo, colors and photos</span></div>
+        <div><b>Mobile-first</b><span>Fast and clean on every phone</span></div>
+        <div><b>Call, text &amp; contact buttons</b><span>Customers reach you in one tap</span></div>
+        <div><b>Google-ready</b><span>Basic SEO and linked to your Google profile</span></div>
+        <div><b>Hosting included</b><span>We host it for you, free for the first year</span></div>
+        <div><b>2 rounds of changes</b><span>We tweak it until you love it</span></div>
+        <div><b>You own it</b><span>Your site, your domain, yours to keep</span></div>
       </div>
+      <p class="note">You'd only pay for your own domain name (usually about $15/year). Not included: online stores, booking software subscriptions or ongoing marketing.</p>
     </div>
   </section>
 
   <section class="s" id="how">
     <div class="wrap">
       <h2>How it works.</h2>
-      <p class="lead">Three steps. One minute to enter.</p>
+      <p class="lead">Every business has the same chance.</p>
       <div class="grid c3">
-        <div class="card step"><span class="tag">1 min</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><div class="n">STEP 1</div><h3>Apply</h3><p>Tell us about your business.</p></div>
-        <div class="card step"><span class="tag">this week</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div><div class="n">STEP 2</div><h3>Quick chat</h3><p>We hear your story.</p></div>
-        <div class="card step"><span class="tag">~1 week</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div><div class="n">STEP 3</div><h3>We build it</h3><p>One business picked. Site goes live.</p></div>
+        <div class="card step"><span class="tag">1 min</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><div class="n">STEP 1</div><h3>Enter</h3><p>Name, business, phone. That's it.</p></div>
+        <div class="card step"><span class="tag">Nov 13</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/><circle cx="12" cy="12" r="1.2"/></svg></div><div class="n">STEP 2</div><h3>Random draw</h3><p>One winner, picked at random.</p></div>
+        <div class="card step"><span class="tag">~1 week</span><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div><div class="n">STEP 3</div><h3>We build it</h3><p>Your site goes live, free.</p></div>
       </div>
-      <span class="date">🗓️ Winner picked Friday, November 13</span>
+      <span class="date">🎲 Random draw Friday, November 13</span>
     </div>
   </section>
 
   <section class="s alt" id="apply">
     <div class="wrap">
-      <h2>Apply in <span class="grad">1 minute.</span></h2>
-      <p class="lead">Orange County businesses only.</p>
+      <h2>Enter in <span class="grad">1 minute.</span></h2>
+      <p class="lead">Orange County businesses. One entry per business.</p>
       <form class="formcard" id="f" novalidate>
         <div class="field"><input id="name" name="name" placeholder="Your name" autocomplete="name" /></div>
         <div class="two">
@@ -193,10 +207,9 @@
           <div class="field"><input id="phone" name="phone" type="tel" inputmode="tel" placeholder="Phone" autocomplete="tel" /></div>
           <div class="field"><input id="email" name="email" type="email" placeholder="Email (optional)" autocomplete="email" /></div>
         </div>
-        <div class="field"><textarea id="need" name="need" rows="3" placeholder="Why should we pick you?"></textarea></div>
         <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off" /></div>
-        <button class="btn pri" id="go" type="submit">Apply for the free website →</button>
-        <p class="consent">By applying, you agree V&amp;M Agency may call or text you about the giveaway. Msg &amp; data rates may apply. Reply STOP to opt out. <a href="../privacy-policy.html">Privacy</a></p>
+        <button class="btn pri" id="go" type="submit">Enter the giveaway →</button>
+        <p class="consent">By entering, you agree V&amp;M Agency may call or text you about the giveaway. Msg &amp; data rates may apply. Reply STOP to opt out. <a href="../privacy-policy.html">Privacy</a></p>
         <div class="msg" id="msg" role="status"></div>
       </form>
     </div>
@@ -207,11 +220,17 @@
       <h2>Questions.</h2>
       <div class="faq">
         <details><summary>Is it really free?</summary><p>Yes. No setup fee, no monthly bill. You only cover your own domain name (usually about $15 a year).</p></details>
-        <details><summary>Who can apply?</summary><p>Any business in Orange County, CA, with or without a website today.</p></details>
-        <details><summary>What if I'm not picked?</summary><p>Everyone who applies hears back from us, with a special local offer.</p></details>
-        <details><summary>How long does it take?</summary><p>About a week after we pick the winner on November 13.</p></details>
+        <details><summary>How is the winner picked?</summary><p>Completely at random. Every eligible entry has the same chance. We draw on Friday, November 13 and contact the winner by phone.</p></details>
+        <details><summary>Who can enter?</summary><p>Any business in Orange County, CA, with or without a website today. One entry per business.</p></details>
+        <details><summary>What if I don't win?</summary><p>Every business that enters gets a special local offer from us.</p></details>
+        <details><summary>How long does it take?</summary><p>About a week after we get your logo, photos and info.</p></details>
         <details><summary>Why are you doing this?</summary><p>We're a Southern California studio and want to show what we can do for local businesses. All we ask is an honest review if you love it.</p></details>
       </div>
+      <details class="rules"><summary>Official rules</summary>
+        <p><b>No purchase necessary.</b> A purchase does not improve your chances. Sponsor: V&amp;M Agency. Open to businesses located in Orange County, California, entered by an owner or authorized representative who is 18 or older. One entry per business. V&amp;M Agency employees and their families are not eligible.</p>
+        <p><b>How to enter:</b> complete the form on this page by 11:59 PM PT on Thursday, November 12, 2026. <b>Drawing:</b> one winner will be selected at random from all eligible entries on Friday, November 13, 2026, and notified by phone or email. If the winner can't be reached within 5 days, an alternate winner will be drawn. Odds depend on the number of eligible entries.</p>
+        <p><b>Prize:</b> one custom website as described above (up to 5 pages, design, build, two rounds of changes and one year of hosting). The domain name is not included. The prize has no cash value and is not transferable. The winner agrees the finished website may be shown in V&amp;M Agency's portfolio. Void where prohibited.</p>
+      </details>
     </div>
   </section>
 
@@ -219,8 +238,8 @@
     <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
     <div class="wrap" style="position:relative">
       <h2>Your website is waiting.</h2>
-      <p class="lead">Apply in 1 minute. Winner picked November 13.</p>
-      <div class="ctas"><a class="btn pri" href="#apply">Apply free →</a></div>
+      <p class="lead">Enter in 1 minute. Random draw November 13.</p>
+      <div class="ctas"><a class="btn pri" href="#apply">Enter free →</a></div>
     </div>
   </section>
 
@@ -242,10 +261,10 @@
         const j = await r.json();
         if (!r.ok || !j.ok) throw new Error(j.error || 'failed');
         f.querySelectorAll('input, select, textarea, button').forEach(x => x.disabled = true);
-        msg.className = 'msg ok'; msg.textContent = "You're in! 🎉 We'll reach out soon.";
+        msg.className = 'msg ok'; msg.textContent = "You're entered! 🎉 Random draw on November 13. Good luck!";
         go.textContent = 'Applied ✓';
       } catch (err) {
-        go.disabled = false; go.textContent = 'Apply for the free website →';
+        go.disabled = false; go.textContent = 'Enter the giveaway →';
         msg.className = 'msg err'; msg.textContent = (err.message && err.message !== 'failed' ? err.message + ' ' : '') + 'Or text us at (253) 335-4907.';
       }
     });
