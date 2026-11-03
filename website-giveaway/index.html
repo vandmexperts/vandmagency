@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Giveaway | V&amp;M Agency</title>
+  <meta name="description" content="We're building one Orange County business a free website. No setup fee, no monthly bill, no catch. Apply in one minute." />
+  <meta property="og:title" content="Website Giveaway: one free website for an Orange County business" />
+  <meta property="og:description" content="No setup fee, no monthly bill, no catch. Apply in one minute." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../logo.png" type="image/png" />
+  <style>
+    .demo { max-width: 1100px; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; display: grid; grid-template-columns: 1.05fr 1fr; gap: 3rem; align-items: start; }
+    .demo h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.05; letter-spacing: -0.02em; margin: 1rem 0; }
+    .demo h1 span { color: var(--orange); }
+    .demo .lead { color: var(--gray); font-size: 1.1rem; max-width: 34rem; }
+    .ticks { list-style: none; margin: 1.75rem 0; display: grid; gap: .8rem; }
+    .ticks li { display: flex; gap: .75rem; align-items: flex-start; font-size: 1.05rem; }
+    .ticks li::before { content: "✓"; color: var(--orange); font-weight: 800; }
+    .talk { margin-top: 2rem; padding: 1.25rem 1.4rem; border: 1px solid var(--border); border-radius: 16px; background: var(--dark); }
+    .talk p { color: var(--gray); margin-bottom: .75rem; font-size: .95rem; }
+    .talk .row { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .talk .btn { margin: 0; }
+    .formcard { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 1.75rem; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+    .formcard h2 { font-size: 1.4rem; margin-bottom: .3rem; }
+    .formcard .small { color: var(--gray); font-size: .9rem; margin-bottom: 1.25rem; }
+    .field { display: grid; gap: .35rem; margin-bottom: 1rem; }
+    .field label { font-size: .9rem; font-weight: 600; }
+    .field input, .field select, .field textarea { width: 100%; padding: .85rem 1rem; border-radius: 12px; border: 1px solid var(--border);
+      background: var(--black); color: var(--white); font: inherit; font-size: 1rem; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--orange); border-color: transparent; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .submit { width: 100%; border: 0; cursor: pointer; font-size: 1.05rem; margin: .25rem 0 0; }
+    .consent { color: var(--gray); font-size: .78rem; margin-top: .9rem; line-height: 1.45; }
+    .msg { margin-top: 1rem; padding: .9rem 1rem; border-radius: 12px; display: none; font-weight: 600; }
+    .msg.ok { display: block; background: rgba(48,209,88,.12); border: 1px solid rgba(48,209,88,.45); }
+    .msg.err { display: block; background: rgba(255,69,58,.12); border: 1px solid rgba(255,69,58,.45); }
+    @media (max-width: 860px) { .demo { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem; } .two { grid-template-columns: 1fr; } }
+      .steps { list-style: none; counter-reset: s; display: grid; gap: .9rem; margin: 1.75rem 0; }
+    .steps li { counter-increment: s; display: flex; gap: .9rem; align-items: flex-start; font-size: 1.02rem; }
+    .steps li::before { content: counter(s); flex: none; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--orange); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .steps b { display: block; }
+    .steps span { color: var(--gray); font-size: .95rem; }
+    .fine { color: var(--gray); font-size: .9rem; margin-top: 1rem; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="V&amp;M Agency Logo" onerror="this.style.display='none'" />
+        <span class="nav-logo-text">V<span>&amp;</span>M Agency</span>
+      </a>
+      <a href="tel:+12533354907" class="nav-cta" style="padding:.55rem 1rem;border-radius:999px">Call us</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="demo">
+      <div>
+        <div class="hero-badge">🎁 Orange County · Website Giveaway</div>
+        <h1>One local business gets a <span>free website.</span></h1>
+        <p class="lead">We're a small web studio here in Southern California, and we're building one Orange County business a brand-new website. No setup fee, no monthly bill, no catch. You keep it. All we ask: if you love it, leave us an honest review.</p>
+        <ul class="ticks">
+          <li>A custom website designed for your business</li>
+          <li>Looks great on phones (where most customers find you)</li>
+          <li>Built so customers can call, book or message you in one tap</li>
+          <li>Set up to help you show up on Google</li>
+        </ul>
+        <ol class="steps">
+          <li><div><b>Fill out the form</b><span>Takes about a minute.</span></div></li>
+          <li><div><b>Quick chat</b><span>We'll reach out to hear about your business.</span></div></li>
+          <li><div><b>We pick one business on Friday, November 13</b><span>and build its website in about a week.</span></div></li>
+        </ol>
+        <p class="fine">Open to businesses in Orange County, CA. You'd only cover your own domain name (usually about $15 a year). Not picked? Everyone who applies hears back from us.</p>
+      </div>
+
+      <div class="formcard">
+        <h2>Apply for the giveaway</h2>
+        <p class="small">1 minute. We'll reach out to every applicant.</p>
+        <form id="f" novalidate>
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required /></div>
+          <div class="two">
+            <div class="field"><label for="business">Business name *</label><input id="business" name="business" autocomplete="organization" /></div>
+            <div class="field"><label for="trade">What you do</label><input id="trade" name="trade" placeholder="e.g. barber, plumber, bakery" /></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="city">City *</label>
+              <select id="city" name="city">
+                <option value="">Choose…</option><option>Anaheim</option><option>Costa Mesa</option><option>Fullerton</option><option>Garden Grove</option>
+                <option>Huntington Beach</option><option>Irvine</option><option>Laguna Beach</option><option>Lake Forest</option><option>Mission Viejo</option>
+                <option>Newport Beach</option><option>Orange</option><option>San Clemente</option><option>Santa Ana</option><option>Tustin</option><option>Yorba Linda</option><option>Other OC city</option>
+              </select></div>
+            <div class="field"><label for="site">Current website (if any)</label><input id="site" name="site" placeholder="none, or yoursite.com" /></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          </div>
+          <div class="field"><label for="need">Why should we pick your business?</label>
+            <textarea id="need" name="need" rows="3" placeholder="Tell us about your business and what a website would do for you"></textarea></div>
+          <div class="hp" aria-hidden="true"><label>Company URL<input name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <button class="btn btn-primary submit" id="go" type="submit">Apply for the free website</button>
+          <p class="consent">By applying, you agree V&amp;M Agency may call or text you about the giveaway. Message &amp; data rates may apply. Reply STOP to opt out. See our <a href="../privacy-policy.html">Privacy Policy</a>.</p>
+          <div class="msg" id="msg" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>&copy; 2026 V&amp;M Agency · <a href="tel:+12533354907">(253) 335-4907</a></p>
+        <div class="footer-legal-links"><a href="../privacy-policy.html">Privacy Policy</a> <a href="../terms-of-service.html">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const f = document.getElementById('f'), msg = document.getElementById('msg'), go = document.getElementById('go');
+    const src = 'website-giveaway' + (new URLSearchParams(location.search).get('src') ? ':' + new URLSearchParams(location.search).get('src') : '');
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(f).entries()); d.source = src;
+      if (!d.name.trim() || !d.business.trim() || !d.city || d.phone.replace(/\D/g, '').length < 10) {
+        msg.className = 'msg err'; msg.textContent = 'Please add your name, business, city and a phone number.'; return;
+      }
+      go.disabled = true; go.textContent = 'Sending…';
+      try {
+        const r = await fetch('https://hq.vandmexperts.com/api/demo-request', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) });
+        const j = await r.json();
+        if (!r.ok || !j.ok) throw new Error(j.error || 'failed');
+        f.querySelectorAll('input, select, textarea, button').forEach(x => x.disabled = true);
+        msg.className = 'msg ok'; msg.textContent = "You're in! 🎉 We'll reach out soon to hear about your business.";
+        go.textContent = 'Applied ✓';
+      } catch (err) {
+        go.disabled = false; go.textContent = 'Apply for the free website';
+        msg.className = 'msg err'; msg.textContent = (err.message && err.message !== 'failed' ? err.message + ' ' : '') + 'Or call/text us at (253) 335-4907.';
+      }
+    });
+  </script>
+</body>
+</html>
