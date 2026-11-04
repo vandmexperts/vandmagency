@@ -131,6 +131,22 @@
     .hero { padding-top: 160px; }
     .bar i { font-style: normal; }
     @media (max-width: 560px) { .bar .bx { display: none; } .cd div { min-width: 64px; } .cd b { font-size: 26px; } }
+    .host { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 22px; }
+    .host .ph { width: 132px; height: 150px; border-radius: 28px; overflow: hidden; position: relative;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 0 0 6px rgba(255,95,31,.12), 0 30px 80px rgba(255,95,31,.35); }
+    .host img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) contrast(1.03); }
+    .host p { color: var(--mute); font-size: 14px; } .host b { color: var(--ink); }
+    .trust { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 16px; font-size: 13px; font-weight: 600; color: #cfcfd6; }
+    .trust span { white-space: nowrap; }
+    .formcard .trust { justify-content: flex-start; gap: 14px; margin-top: 14px; }
+    .count { margin-top: 18px; font-size: 14px; color: #cfcfd6; } .count b { color: var(--or2); }
+    .count::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #30D158; margin-right: 8px; box-shadow: 0 0 10px #30D158; vertical-align: 1px; }
+    .mbar { display: none; }
+    @media (max-width: 760px) {
+      .mbar { display: flex; position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 60; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 10px 10px 10px 16px; border-radius: 18px; background: rgba(18,18,20,.92); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); box-shadow: 0 20px 50px rgba(0,0,0,.6); }
+      .mbar b { display: block; font-size: 17px; color: var(--or2); font-variant-numeric: tabular-nums; } .mbar span { font-size: 11px; color: var(--mute); }
+      .mbar .btn { padding: 11px 18px; } footer { padding-bottom: 96px; } .trust { gap: 10px; font-size: 12px; } }
   </style>
 </head>
 <body>
@@ -143,10 +159,14 @@
   <header class="hero">
     <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
     <div class="wrap" style="position:relative">
+      <div class="host"><div class="ph"><img src="img/vlad.jpg" alt="Vlad, V&amp;M Agency"></div>
+        <p><b>Hosted by Vlad</b> · V&amp;M Agency, Southern California</p></div>
       <span class="chip">🎁 Orange County · Website Giveaway</span>
       <h1>One local business gets a <span class="grad">free website.</span></h1>
       <p class="sub">Winner drawn <b>at random</b>. No fees. No catch.</p>
       <div class="ctas"><a class="btn pri" href="#apply">Enter free →</a><a class="btn sec" href="#included">What's included</a></div>
+      <div class="trust"><span>✓ No credit card</span><span>✓ Nothing to sign</span><span>✓ Random draw</span></div>
+      <p class="count" id="count" hidden></p>
       <div class="cd" aria-label="Time left to enter"><div><b data-d>14</b><span>days</span></div><div><b data-h>00</b><span>hours</span></div><div><b data-m>00</b><span>min</span></div><div><b data-s>00</b><span>sec</span></div></div>
       <p class="cdl">until entries close</p>
 
@@ -224,6 +244,7 @@
         </div>
         <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off" /></div>
         <button class="btn pri" id="go" type="submit">Enter the giveaway →</button>
+        <div class="trust"><span>✓ No credit card</span><span>✓ Nothing to sign</span><span>✓ Random draw</span></div>
         <p class="consent">By entering, you agree V&amp;M Agency may call or text you about the giveaway. Msg &amp; data rates may apply. Reply STOP to opt out. <a href="../privacy-policy.html">Privacy</a></p>
         <div class="msg" id="msg" role="status"></div>
       </form>
@@ -258,6 +279,8 @@
     </div>
   </section>
 
+  <div class="mbar"><div><b id="mbcd">14d 00h</b><span>left to enter</span></div><a class="btn pri" href="#apply">Enter free →</a></div>
+
   <footer>© 2026 V&amp;M Agency · <a href="tel:+12533354907">(253) 335-4907</a> · <a href="../privacy-policy.html">Privacy</a> · <a href="../terms-of-service.html">Terms</a></footer>
 
   <script>
@@ -289,10 +312,15 @@
       let t = Math.max(0, END - Date.now()); const d = Math.floor(t / 864e5), h = Math.floor(t / 36e5) % 24, m = Math.floor(t / 6e4) % 60, s = Math.floor(t / 1e3) % 60;
       document.querySelectorAll('[data-d]').forEach(e => e.textContent = d); document.querySelectorAll('[data-h]').forEach(e => e.textContent = pad(h));
       document.querySelectorAll('[data-m]').forEach(e => e.textContent = pad(m)); document.querySelectorAll('[data-s]').forEach(e => e.textContent = pad(s));
+      document.getElementById('mbcd').textContent = t ? `${d}d ${pad(h)}h ${pad(m)}m` : 'Closed';
       document.getElementById('barcd').textContent = t ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s` : 'now: entries closed';
       if (!t) { go.disabled = true; go.textContent = 'Entries closed'; }
     }
     tick(); setInterval(tick, 1000);
+    // live entry counter (real number from our server), shown once there are 10+ entries
+    fetch('https://hq.vandmexperts.com/api/giveaway/count').then(r => r.json()).then(j => {
+      if (j.count >= 10) { const c = document.getElementById('count'); c.innerHTML = `<b>${j.count}</b> Orange County businesses have entered`; c.hidden = false; }
+    }).catch(() => {});
   </script>
 </body>
 </html>
