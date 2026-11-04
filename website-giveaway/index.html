@@ -128,7 +128,6 @@
     .cdl { color: var(--mute); font-size: 13px; margin-top: 10px; }
     .bar { position: fixed; top: 60px; left: 0; right: 0; z-index: 49; text-align: center; padding: 7px 12px; font-size: 13px; font-weight: 700; color: #160800; background: linear-gradient(90deg, var(--or2), var(--or)); }
     .bar span { font-variant-numeric: tabular-nums; }
-    .hero { padding-top: 160px; }
     .bar i { font-style: normal; }
     @media (max-width: 560px) { .bar .bx { display: none; } .cd div { min-width: 64px; } .cd b { font-size: 26px; } }
     .host { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 22px; }
@@ -147,6 +146,28 @@
         padding: 10px 10px 10px 16px; border-radius: 18px; background: rgba(18,18,20,.92); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); box-shadow: 0 20px 50px rgba(0,0,0,.6); }
       .mbar b { display: block; font-size: 17px; color: var(--or2); font-variant-numeric: tabular-nums; } .mbar span { font-size: 11px; color: var(--mute); }
       .mbar .btn { padding: 11px 18px; } footer { padding-bottom: 96px; } .trust { gap: 10px; font-size: 12px; } }
+    /* iman-style hero */
+    nav { display: none; }
+    .bar { top: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; padding: 8px 18px; }
+    .bar .bl small { display: block; font-size: 10px; letter-spacing: .08em; color: #5a1a00; } .bar .bl span { font-size: 14px; font-weight: 900; }
+    .bar .bm { font-size: 15px; font-weight: 800; } .bar .bb { background: #0a0a0a; color: #fff; padding: 9px 16px; border-radius: 99px; font-size: 13px; font-weight: 800; white-space: nowrap; }
+    .hero2 { position: relative; overflow: hidden; text-align: center; padding: 64px 20px 70px; background: radial-gradient(70% 55% at 50% 30%, #2a1306 0%, #0b0705 55%, #050505 100%); }
+    .beams i { position: absolute; top: -40px; width: 160px; height: 640px; transform-origin: top center; background: linear-gradient(180deg, rgba(255,150,70,.35), rgba(255,120,40,0)); filter: blur(14px); }
+    .beams i:nth-child(1) { left: 6%; transform: rotate(-24deg); } .beams i:nth-child(2) { left: 24%; transform: rotate(-12deg); } .beams i:nth-child(3) { left: 46%; transform: rotate(0); opacity: .6; }
+    .beams i:nth-child(4) { right: 24%; transform: rotate(12deg); } .beams i:nth-child(5) { right: 6%; transform: rotate(24deg); }
+    .chev { position: absolute; left: 50%; top: 40px; width: 1200px; height: 600px; transform: translateX(-50%); filter: drop-shadow(0 0 18px rgba(255,110,40,.55)); }
+    .me { position: relative; width: 380px; max-width: 78vw; margin: 0 auto; z-index: 2; }
+    .me img { width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 98%); mask-image: linear-gradient(180deg, #000 72%, transparent 98%); filter: drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+    .htext { position: relative; z-index: 3; margin-top: -90px; }
+    .lock { display: inline-flex; align-items: center; gap: 12px; font-size: 22px; } .lock img { width: 34px; height: 34px; border-radius: 8px; }
+    .lock span { color: rgba(255,255,255,.4); font-size: 30px; font-weight: 200; } .lock em { font-style: normal; text-align: left; font-size: 12px; line-height: 1.05; font-weight: 900; letter-spacing: .14em; color: var(--or2); }
+    .live { display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; padding: 8px 18px; border-radius: 99px; font-size: 13px; font-weight: 800; letter-spacing: .02em; background: rgba(0,0,0,.55); border: 1.5px solid rgba(255,138,60,.7); box-shadow: 0 0 20px rgba(255,95,31,.35); }
+    .live i { width: 10px; height: 10px; border-radius: 50%; background: #FF3B30; box-shadow: 0 0 10px #FF3B30; animation: pulse 1.4s infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+    .h1b { max-width: none; font-size: clamp(34px, 5.6vw, 64px); line-height: 1.04; letter-spacing: -.035em; margin: 18px auto 12px; }
+    .btn.big { font-size: 17px; padding: 17px 34px; letter-spacing: .02em; }
+    .hero2 .trust { margin-top: 14px; }
+    @media (max-width: 760px) { .bar .bm { display: none; } .hero2 { padding-top: 40px; } .htext { margin-top: -60px; } .chev { top: 0; } .lock { font-size: 18px; } }
   </style>
 </head>
 <body>
@@ -154,36 +175,27 @@
     <a class="brand" href="../index.html"><img src="../logo.png" alt="">V&amp;M Agency <small>Website Giveaway</small></a>
     <a class="btn pri sm" href="#apply">Enter now</a>
   </div></nav>
-  <div class="bar">🎁 Entries close in <span id="barcd">14d 00h 00m</span><i class="bx"> · Random draw Nov 17</i></div>
+  <div class="bar"><div class="bl"><small>🎁 ENTRIES CLOSE IN:</small><span id="barcd">14d 00h 00m</span></div><div class="bm">One Orange County business gets a free website</div><a class="bb" href="#apply">ENTER FREE</a></div>
 
-  <header class="hero">
-    <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
-    <div class="wrap" style="position:relative">
-      <div class="host"><div class="ph"><img src="img/vlad.jpg" alt="Vlad, V&amp;M Agency"></div>
-        <p><b>Hosted by Vlad</b> · V&amp;M Agency, Southern California</p></div>
-      <span class="chip">🎁 Orange County · Website Giveaway</span>
-      <h1>One local business gets a <span class="grad">free website.</span></h1>
-      <p class="sub">Winner drawn <b>at random</b>. No fees. No catch.</p>
-      <div class="ctas"><a class="btn pri" href="#apply">Enter free →</a><a class="btn sec" href="#included">What's included</a></div>
+  <header class="hero2">
+    <div class="beams"><i></i><i></i><i></i><i></i><i></i></div>
+    <svg class="chev" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF8A3C" stop-opacity=".9"/><stop offset="1" stop-color="#FF5F1F" stop-opacity=".15"/></linearGradient></defs>
+      <g fill="none" stroke="url(#cg)" stroke-width="10" stroke-linejoin="round">
+        <path d="M380 40 L230 300 L380 560" opacity=".9"/><path d="M300 40 L150 300 L300 560" opacity=".55"/><path d="M220 40 L70 300 L220 560" opacity=".3"/>
+        <path d="M820 40 L970 300 L820 560" opacity=".9"/><path d="M900 40 L1050 300 L900 560" opacity=".55"/><path d="M980 40 L1130 300 L980 560" opacity=".3"/>
+        <path d="M470 20 L600 -40 L730 20" opacity=".0"/>
+      </g>
+    </svg>
+    <div class="me"><img src="img/vlad-cut.webp" alt="Vlad, V&amp;M Agency" width="640" height="896"></div>
+    <div class="htext">
+      <div class="lock"><img src="../logo.png" alt=""><b>V&amp;M Agency</b><span>|</span><em>WEBSITE<br>GIVEAWAY</em></div>
+      <div class="live"><i></i>ORANGE COUNTY · RANDOM DRAW NOV 17</div>
+      <h1 class="h1b">I'm Giving One OC Business<br>A <span class="grad">Free Website</span></h1>
+      <p class="sub">No fees. No catch. You keep it.</p>
+      <div class="ctas"><a class="btn pri big" href="#apply">ENTER FREE →</a></div>
       <div class="trust"><span>✓ No credit card</span><span>✓ Nothing to sign</span><span>✓ Random draw</span></div>
       <p class="count" id="count" hidden></p>
-      <div class="cd" aria-label="Time left to enter"><div><b data-d>14</b><span>days</span></div><div><b data-h>00</b><span>hours</span></div><div><b data-m>00</b><span>min</span></div><div><b data-s>00</b><span>sec</span></div></div>
-      <p class="cdl">until entries close</p>
-
-      <div class="stage">
-        <div class="phone"><div class="notch"></div>
-          <div class="site">
-            <div class="top">Your Business<i></i></div>
-            <div class="hero2"><h4>Welcome<br>in.</h4><p>Proudly serving Orange County</p><span>Book now</span></div>
-            <div class="row"><div>Services</div><div>Gallery</div><div>Reviews</div></div>
-            <div class="stars"><b>★★★★★</b><br>"Best in Irvine, hands down."</div>
-            <div class="call">📞 Call or book in one tap</div>
-          </div>
-        </div>
-        <div class="float f1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><b>$0</b><small>No setup · no monthly</small></div></div>
-        <div class="float f2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><b>On Google</b><small>Built to be found</small></div></div>
-        <div class="float f3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#160800" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div><b>Nov 17</b><small>Random draw</small></div></div>
-      </div>
     </div>
   </header>
 
