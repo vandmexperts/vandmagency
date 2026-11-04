@@ -157,7 +157,15 @@
     .beams i:nth-child(4) { right: 24%; transform: rotate(12deg); } .beams i:nth-child(5) { right: 6%; transform: rotate(24deg); }
     .chev { position: absolute; left: 50%; top: 40px; width: 1200px; height: 600px; transform: translateX(-50%); filter: drop-shadow(0 0 18px rgba(255,110,40,.55)); }
     .me { position: relative; width: 380px; max-width: 78vw; margin: 0 auto; z-index: 2; }
-    .me img { width: 100%; height: auto; display: block; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 98%); mask-image: linear-gradient(180deg, #000 72%, transparent 98%); filter: drop-shadow(0 30px 60px rgba(0,0,0,.6)); }
+    .me::before { content: ""; position: absolute; left: 50%; top: 6%; width: 120%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; z-index: -1;
+      background: radial-gradient(closest-side, rgba(255,140,60,.55), rgba(255,95,31,.22) 45%, rgba(255,95,31,0) 72%); filter: blur(10px); animation: breathe 5s ease-in-out infinite; }
+    .me::after { content: ""; position: absolute; left: 50%; top: 2%; width: 92%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; z-index: -1;
+      border: 2px solid rgba(255,150,80,.35); box-shadow: 0 0 40px rgba(255,110,40,.35), inset 0 0 40px rgba(255,110,40,.25); }
+    @keyframes breathe { 50% { opacity: .75; transform: translateX(-50%) scale(1.04); } }
+    .me img { width: 100%; height: auto; display: block;
+      -webkit-mask-image: radial-gradient(ellipse 62% 78% at 50% 36%, #000 62%, transparent 100%), linear-gradient(180deg, #000 66%, transparent 96%);
+      -webkit-mask-composite: source-in; mask-image: radial-gradient(ellipse 62% 78% at 50% 36%, #000 62%, transparent 100%), linear-gradient(180deg, #000 66%, transparent 96%); mask-composite: intersect;
+      filter: drop-shadow(0 0 1px rgba(255,170,110,.6)) drop-shadow(0 0 24px rgba(255,110,40,.45)); }
     .htext { position: relative; z-index: 3; margin-top: -90px; }
     .lock { display: inline-flex; align-items: center; gap: 12px; font-size: 22px; } .lock img { width: 34px; height: 34px; border-radius: 8px; }
     .lock span { color: rgba(255,255,255,.4); font-size: 30px; font-weight: 200; } .lock em { font-style: normal; text-align: left; font-size: 12px; line-height: 1.05; font-weight: 900; letter-spacing: .14em; color: var(--or2); }
