@@ -326,6 +326,9 @@
         msg.className = 'msg err'; msg.textContent = (err.message && err.message !== 'failed' ? err.message + ' ' : '') + 'Or text us at (253) 335-4907.';
       }
     });
+    // count page opens (numbers only, no personal data): Facebook/Instagram in-app browsers hide the referrer, so name them
+    try { const ua = navigator.userAgent, ref = /FBA[NV]|FB_IAB/.test(ua) ? 'https://facebook.com/app' : /Instagram/.test(ua) ? 'https://instagram.com/app' : document.referrer;
+      navigator.sendBeacon('https://hq.vandmexperts.com/api/giveaway/view', ref || ''); } catch (e) {}
     // live countdown to entries closing: Saturday, Nov 14, 2026, 11:59:59 PM Pacific
     const END = new Date('2026-11-14T23:59:59-08:00').getTime(), pad = n => String(n).padStart(2, '0');
     function tick() {
